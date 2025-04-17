@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int trafficA, trafficB, trafficC, trafficD;
+
+    printf("Enter vehicle count for Road A: ");
+    scanf("%d", &trafficA);
+    printf("Enter vehicle count for Road B: ");
+    scanf("%d", &trafficB);
+    printf("Enter vehicle count for Road C: ");
+    scanf("%d", &trafficC);
+    printf("Enter vehicle count for Road D: ");
+    scanf("%d", &trafficD);
+
+    // Simple AI logic: Give green light to the road with highest traffic
+    if (trafficA >= trafficB && trafficA >= trafficC && trafficA >= trafficD) {
+        printf("Green Light: Road A\n");
+    } else if (trafficB >= trafficA && trafficB >= trafficC && trafficB >= trafficD) {
+        printf("Green Light: Road B\n");
+    } else if (trafficC >= trafficA && trafficC >= trafficB && trafficC >= trafficD) {
+        printf("Green Light: Road C\n");
+    } else {
+        printf("Green Light: Road D\n");
+    }
+
+    return 0;
+}
